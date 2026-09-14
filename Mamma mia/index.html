@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mamma Mia!</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f6ef;
+            color: #174A7E;
+        }
+
+
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            min-height: 75px;
+            background-color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 40px;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            color: #174A7E;
+            white-space: nowrap;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #174A7E;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            padding: 27px 0 8px;
+        }
+
+        .header nav a:hover,
+        .header nav .activo {
+            color: #E94B8A;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            width: 100%;
+            height: 350px;
+
+            display: flex;
+            align-items: center;
+
+            padding-left: 70px;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.8) 0%,
+                    rgba(255,255,255,0.35) 35%,
+                    rgba(255,255,255,0) 65%
+                ),
+                url("img/mamma mia.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-texto {
+            width: 420px;
+        }
+
+        .hero-texto h1 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 62px;
+            font-weight: normal;
+            line-height: 1;
+
+            color: #174A7E;
+
+            margin-bottom: 12px;
+        }
+
+        .hero-texto h1::after {
+            content: "";
+
+            display: block;
+
+            width: 65px;
+            height: 4px;
+
+            background-color: #E94B8A;
+
+            margin-top: 10px;
+        }
+
+        .hero-texto p {
+            width: 350px;
+
+            font-size: 13px;
+            line-height: 1.45;
+
+            color: #174A7E;
+
+            margin: 16px 0 22px;
+        }
+
+        .boton {
+            display: inline-block;
+
+            background-color: #E94B8A;
+            color: white;
+
+            padding: 12px 19px;
+
+            text-decoration: none;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            border-radius: 4px;
+        }
+
+        .boton:hover {
+            background-color: #d63878;
+        }
+
+
+        /* ACCESOS */
+
+        .accesos {
+            width: 82%;
+
+            margin: -25px auto 0;
+
+            position: relative;
+            z-index: 2;
+
+            background-color: white;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+            overflow: hidden;
+        }
+
+        .acceso {
+            min-height: 95px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 18px;
+
+            border-right: 1px solid #dddddd;
+        }
+
+        .acceso:last-child {
+            border-right: none;
+        }
+
+        .icono {
+            font-size: 30px;
+            min-width: 42px;
+            text-align: center;
+        }
+
+        .acceso h3 {
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .acceso p {
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+
+        /* CONTENIDO */
+
+        .contenido {
+            width: 82%;
+
+            margin: 42px auto 70px;
+        }
+
+        .contenido h2 {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+
+        /* TARJETAS */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background-color: white;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 140px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 6px;
+
+            margin-bottom: 10px;
+        }
+
+        .categoria {
+            display: block;
+
+            color: #E94B8A;
+
+            font-size: 9px;
+            font-weight: bold;
+
+            margin-bottom: 6px;
+        }
+
+        .tarjeta h3 {
+            color: #174A7E;
+
+            font-size: 17px;
+            line-height: 1.15;
+
+            margin-bottom: 8px;
+        }
+
+        .tarjeta p {
+            font-size: 11px;
+            line-height: 1.4;
+
+            margin-bottom: 18px;
+        }
+
+        .tarjeta > a {
+            color: #174A7E;
+
+            text-decoration: none;
+
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .tarjeta > a:hover {
+            color: #E94B8A;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            width: 100%;
+
+            background-color: #F2E4CF;
+
+            display: grid;
+            grid-template-columns: 1.1fr 1.3fr 0.8fr;
+
+            gap: 55px;
+
+            padding: 35px 10%;
+
+            color: #174A7E;
+        }
+
+        .marca-footer {
+            border-right: 1px solid rgba(23,74,126,0.2);
+
+            padding-right: 30px;
+        }
+
+        .footer-columna h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 26px;
+            font-weight: normal;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-columna h3 {
+            font-size: 11px;
+            margin-bottom: 15px;
+        }
+
+        .footer-columna p {
+            max-width: 220px;
+
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+
+        /* LINKS FOOTER */
+
+        .links-footer {
+            display: flex;
+            gap: 40px;
+        }
+
+        .links-footer div {
+            display: flex;
+            flex-direction: column;
+
+            gap: 7px;
+        }
+
+        .links-footer a {
+            color: #174A7E;
+
+            text-decoration: none;
+
+            font-size: 10px;
+        }
+
+        .links-footer a:hover {
+            color: #E94B8A;
+        }
+
+
+        /* REDES */
+
+        .redes {
+            display: flex;
+            gap: 12px;
+        }
+
+        .redes a {
+            width: 32px;
+            height: 32px;
+
+            background-color: #174A7E;
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .header {
+                flex-direction: column;
+
+                padding: 18px;
+            }
+
+            .header nav {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                gap: 15px;
+
+                margin-top: 10px;
+            }
+
+            .header nav a {
+                padding: 5px 0;
+            }
+
+            .hero {
+                height: 400px;
+
+                padding-left: 35px;
+            }
+
+            .hero-texto h1 {
+                font-size: 48px;
+            }
+
+            .accesos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .marca-footer {
+                border-right: none;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero {
+                height: 420px;
+
+                padding: 25px 20px;
+
+                align-items: flex-start;
+            }
+
+            .hero-texto {
+                width: 100%;
+            }
+
+            .hero-texto h1 {
+                font-size: 40px;
+            }
+
+            .hero-texto p {
+                width: 100%;
+            }
+
+            .accesos {
+                width: 92%;
+
+                grid-template-columns: 1fr;
+            }
+
+            .contenido {
+                width: 92%;
+            }
+
+            .footer {
+                padding: 30px 7%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            MAMMA MIA! 🌸
+        </div>
+
+        
+   <nav>
+    <a href="index.html" class="activo">Inicio</a>
+    <a href="peliculas.html">Películas</a>
+    <a href="personajes.html">Personajes</a>
+    <a href="./canciones.html">Canciones</a>
+    <a href="galeria.html">Galería</a>
+    <a href="sobre-la-saga.html">Sobre la saga</a>
+   <a href="contacto.html">Contacto</a>
+</nav>  
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-texto">
+
+            <h1>MAMMA MIA!</h1>
+
+            <p>
+                Bienvenidos al lugar donde la música de ABBA,
+                las historias de amor y la belleza del Mediterráneo
+                se encuentran. Explorá todo sobre la saga que nos hizo
+                cantar, reír y soñar.
+            </p>
+
+            <a href="#" class="boton">
+                EXPLORÁ LA SAGA →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ACCESOS -->
+
+    <section class="accesos">
+
+        <div class="acceso">
+
+            <div class="icono">🏛️</div>
+
+            <div>
+                <h3>SOBRE LA SAGA</h3>
+
+                <p>
+                    Descubrí el origen y la historia de Mamma Mia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="acceso">
+
+            <div class="icono">🌿</div>
+
+            <div>
+                <h3>PERSONAJES</h3>
+
+                <p>
+                    Conocé a los inolvidables personajes de la historia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="acceso">
+
+            <div class="icono">🎤</div>
+
+            <div>
+                <h3>CANCIONES</h3>
+
+                <p>
+                    Reviví los grandes éxitos icónicos de ABBA.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="acceso">
+
+            <div class="icono">📷</div>
+
+            <div>
+                <h3>GALERÍA</h3>
+
+                <p>
+                    Fotos, paisajes y momentos icónicos de la saga.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- NOVEDADES -->
+
+    <main class="contenido">
+
+        <h2>ÚLTIMAS NOVEDADES</h2>
+
+        <div class="tarjetas">
+
+
+            <!-- TARJETA 1 -->
+
+            <article class="tarjeta">
+
+                <img
+                    src="img/mama.jpg"
+                    alt="Canciones de Mamma Mia"
+                >
+
+                <span class="categoria">
+                    CANCIONES
+                </span>
+
+                <h3>
+                    Las canciones de ABBA que hicieron historia
+                </h3>
+
+                <p>
+                    Un repaso por los clásicos que le dan vida a Mamma Mia.
+                </p>
+
+                <a href="#">
+                    LEER MÁS →
+                </a>
+
+            </article>
+
+
+            <!-- TARJETA 2 -->
+
+            <article class="tarjeta">
+
+                <img
+                    src="img/Mamma mia (1).jpg"
+                    alt="Locaciones de Mamma Mia"
+                >
+
+                <span class="categoria">
+                    LOCACIONES
+                </span>
+
+                <h3>
+                    Los escenarios reales de Mamma Mia!
+                </h3>
+
+                <p>
+                    Visitamos los lugares paradisíacos donde se filmaron las películas.
+                </p>
+
+                <a href="#">
+                    LEER MÁS →
+                </a>
+
+            </article>
+
+
+            <!-- TARJETA 3 -->
+
+            <article class="tarjeta">
+
+                <img
+                    src="img/Mamma mia (2).jpg"
+                    alt="Películas de Mamma Mia"
+                >
+
+                <span class="categoria">
+                    PELÍCULAS
+                </span>
+
+                <h3>
+                    Mamma Mia! (2008) y Mamma Mia! Vamos Otra Vez
+                </h3>
+
+                <p>
+                    Dos películas, una misma magia. Reviví lo mejor de ambas historias.
+                </p>
+
+                <a href="#">
+                    LEER MÁS →
+                </a>
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+
+        <div class="footer-columna marca-footer">
+
+            <h2>
+                MAMMA MIA! 🌸
+            </h2>
+
+            <p>
+                La magia de ABBA, el amor
+                y la belleza del Mediterráneo.
+            </p>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>
+                NAVEGACIÓN
+            </h3>
+
+            <div class="links-footer">
+
+                <div>
+                    <a href="#">Inicio</a>
+                    <a href="#">Películas</a>
+                    <a href="#">Personajes</a>
+                </div>
+
+                <div>
+                    <a href="#">Canciones</a>
+                    <a href="#">Galería</a>
+                    <a href="#">Sobre la saga</a>
+                    <a href="#">Contacto</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>
+                SEGUINOS
+            </h3>
+
+            <div class="redes">
+
+                <a href="#">
+                    f
+                </a>
+
+                <a href="#">
+                    ◎
+                </a>
+
+                <a href="#">
+                    ▶
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
