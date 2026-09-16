@@ -1,0 +1,2862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f6ef;
+    color: #174A7E;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #174A7E;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #174A7E;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.header nav a:hover,
+.header nav .activo {
+    color: #E94B8A;
+}
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 70px;
+
+background-image:
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,0.8) 0%,
+        rgba(255,255,255,0.35) 35%,
+        rgba(255,255,255,0) 65%
+    ),
+url("../img/Mamma mia.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-texto {
+    width: 420px;
+}
+
+.hero-texto h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 62px;
+    font-weight: normal;
+    color: #174A7E;
+    margin-bottom: 12px;
+}
+
+.hero-texto h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #E94B8A;
+    margin-top: 8px;
+}
+
+.hero-texto p {
+    width: 340px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #174A7E;
+    margin-bottom: 20px;
+}
+
+.boton {
+    display: inline-block;
+
+    background-color: #E94B8A;
+    color: white;
+
+    padding: 11px 18px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border-radius: 4px;
+}
+
+.boton:hover {
+    background-color: #d63878;
+}
+
+/* ACCESOS */
+
+.accesos {
+    width: 82%;
+    margin: -25px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+    overflow: hidden;
+}
+
+.acceso {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border-right: 1px solid #ddd;
+}
+
+.acceso:last-child {
+    border-right: none;
+}
+
+.icono {
+    font-size: 30px;
+}
+
+.acceso h3 {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.acceso p {
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+/* CONTENIDO */
+
+.contenido {
+    width: 82%;
+    margin: 40px auto 70px;
+}
+
+.contenido h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 135px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    margin-bottom: 10px;
+}
+
+.categoria {
+    display: block;
+
+    color: #E94B8A;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.tarjeta a {
+    text-decoration: none;
+    color: #174A7E;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    color: #E94B8A;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+
+    background-color: #F2E4CF;
+
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr 0.8fr;
+
+    gap: 50px;
+
+    padding: 35px 10%;
+
+    color: #174A7E;
+}
+
+.footer-columna h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.footer-columna h3 {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.links-footer {
+    display: flex;
+    gap: 40px;
+}
+
+.links-footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.links-footer a {
+    color: #174A7E;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.links-footer a:hover {
+    color: #E94B8A;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+}
+
+.redes a {
+    width: 32px;
+    height: 32px;
+
+    background-color: #174A7E;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .hero {
+        height: 400px;
+        padding-left: 35px;
+    }
+
+    .hero-texto h1 {
+        font-size: 48px;
+    }
+
+    .accesos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero {
+        height: 420px;
+        padding: 30px 20px;
+        align-items: flex-start;
+    }
+
+    .hero-texto {
+        width: 100%;
+    }
+
+    .hero-texto h1 {
+        font-size: 40px;
+    }
+
+    .hero-texto p {
+        width: 100%;
+    }
+
+    .accesos {
+        width: 92%;
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        width: 92%;
+    }
+}
+
+/* =========================
+   PAGINA PELICULAS
+========================= */
+
+.peliculas-contenido {
+    width: 82%;
+    margin: 40px auto;
+}
+
+/* TITULO */
+
+.peliculas-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.peliculas-titulo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    color: #174A7E;
+    margin-bottom: 8px;
+}
+
+.peliculas-titulo p {
+    font-size: 13px;
+    color: #174A7E;
+}
+
+.detalle-titulo {
+    width: 55px;
+    height: 3px;
+    background-color: #E94B8A;
+    margin: 10px auto;
+}
+
+/* TARJETA DE CADA PELICULA */
+
+.pelicula-card {
+    background-color: white;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    padding: 20px;
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* CONTENEDOR DE IMAGEN */
+
+.pelicula-imagen {
+    width: 45%;
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+/* IMAGEN GENERAL */
+
+.pelicula-imagen img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    border-radius: 10px;
+}
+
+/* SOLO SEGUNDA PELICULA */
+
+.pelicula-2 .pelicula-imagen {
+    height: 280px;
+    overflow: hidden;
+}
+
+.pelicula-2 .pelicula-imagen img {
+    width: 100%;
+    height: 292px;
+    object-fit: cover;
+    transform: translateY(-12px);
+}
+
+/* INFORMACION */
+
+.pelicula-info {
+    width: 55%;
+}
+
+.pelicula-info h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    line-height: 1.1;
+
+    color: #174A7E;
+
+    margin-bottom: 15px;
+}
+
+.pelicula-info p {
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #174A7E;
+
+    margin-bottom: 20px;
+}
+
+/* BOTON */
+
+.pelicula-info .boton {
+    display: inline-block;
+
+    background-color: #E94B8A;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.pelicula-info .boton:hover {
+    background-color: #d63878;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .peliculas-contenido {
+        width: 90%;
+    }
+
+    .pelicula-card {
+        flex-direction: column;
+    }
+
+    .pelicula-imagen,
+    .pelicula-info {
+        width: 100%;
+    }
+
+    .pelicula-imagen {
+        height: 240px;
+    }
+
+    .pelicula-imagen img {
+        height: 240px;
+    }
+
+    .foto-peli-2 {
+        top: -8px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .peliculas-titulo h1 {
+        font-size: 32px;
+    }
+
+    .pelicula-info h2 {
+        font-size: 23px;
+    }
+
+    .pelicula-info p {
+        font-size: 12px;
+    }
+
+    .pelicula-imagen {
+        height: 220px;
+    }
+
+    .pelicula-imagen img {
+        height: 220px;
+    }
+
+    .foto-peli-2 {
+        top: -8px;
+    }
+}
+
+/* =========================
+   PAGINA PERSONAJES
+========================= */
+
+.personajes-contenido {
+    width: 88%;
+    margin: 40px auto 70px;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.personajes-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.personajes-titulo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    color: #174A7E;
+    margin-bottom: 8px;
+}
+
+.personajes-titulo p {
+    font-size: 13px;
+    color: #174A7E;
+}
+
+.personajes-titulo .detalle-titulo {
+    width: 55px;
+    height: 3px;
+    background-color: #E94B8A;
+    margin: 10px auto 0;
+}
+
+
+/* =========================
+   GRILLA DE PERSONAJES
+========================= */
+
+.personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.personaje-card {
+    background-color: #ffffff;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 18px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.personaje-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   FOTOS GENERALES
+========================= */
+
+.personaje-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   AJUSTES ESPECIALES
+========================= */
+
+/* Donna: mostrar mejor la cara */
+.foto-donna {
+    object-position: center 20% !important;
+}
+
+/* Tanya: mostrar mejor la cara */
+.foto-tanya {
+    object-position: center 20% !important;
+}
+
+
+/* =========================
+   NOMBRES
+========================= */
+
+.personaje-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    color: #174A7E;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   DESCRIPCIONES
+========================= */
+
+.personaje-card p {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #174A7E;
+
+    padding: 0 14px;
+}
+
+
+/* =========================
+   BOTON
+========================= */
+
+.personajes-boton {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.personajes-boton .boton {
+    display: inline-block;
+
+    background-color: #E94B8A;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.personajes-boton .boton:hover {
+    background-color: #d63878;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .personajes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .personaje-card img {
+        height: 250px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .personajes-contenido {
+        width: 92%;
+    }
+
+    .personajes-titulo h1 {
+        font-size: 32px;
+    }
+
+    .personajes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .personaje-card img {
+        height: 300px;
+    }
+
+}
+/* =========================
+   PAGINA CANCIONES
+========================= */
+
+.canciones-contenido {
+    width: 82%;
+    margin: 40px auto 70px;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.canciones-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.canciones-titulo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    color: #174A7E;
+    margin-bottom: 8px;
+}
+
+.canciones-titulo p {
+    font-size: 13px;
+    color: #174A7E;
+}
+
+.canciones-titulo .detalle-titulo {
+    width: 55px;
+    height: 3px;
+    background-color: #E94B8A;
+    margin: 10px auto 0;
+}
+
+
+/* =========================
+   BLOQUES DE CANCIONES
+========================= */
+
+.album-canciones {
+    background-color: #eef6fb;
+    border-radius: 12px;
+
+    padding: 28px 30px;
+    margin-bottom: 28px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.album-canciones h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    color: #174A7E;
+
+    text-align: center;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   LISTA DE CANCIONES
+========================= */
+
+.lista-canciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px 18px;
+}
+
+
+/* =========================
+   CADA CANCION
+========================= */
+
+.cancion {
+    background-color: #ffffff;
+
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    color: #174A7E;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+
+    transition: 0.2s;
+}
+
+.cancion:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   BOTON PLAY
+========================= */
+
+.play {
+    width: 25px;
+    height: 25px;
+
+    min-width: 25px;
+
+    border-radius: 50%;
+
+    background-color: #174A7E;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    padding-left: 2px;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .canciones-contenido {
+        width: 90%;
+    }
+
+    .lista-canciones {
+        grid-template-columns: 1fr;
+    }
+
+    .album-canciones {
+        padding: 24px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media (max-width: 550px) {
+
+    .canciones-contenido {
+        width: 92%;
+    }
+
+    .canciones-titulo h1 {
+        font-size: 32px;
+    }
+
+    .album-canciones {
+        padding: 20px 15px;
+    }
+
+    .album-canciones h2 {
+        font-size: 20px;
+    }
+
+    .cancion {
+        font-size: 11px;
+    }
+}
+
+/* =========================
+   PAGINA GALERIA
+========================= */
+
+.galeria-contenido {
+    width: 88%;
+    margin: 40px auto 70px;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.galeria-titulo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.galeria-titulo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    color: #174A7E;
+    margin-bottom: 8px;
+}
+
+.galeria-titulo p {
+    font-size: 13px;
+    color: #174A7E;
+}
+
+.galeria-titulo .detalle-titulo {
+    width: 55px;
+    height: 3px;
+    background-color: #E94B8A;
+    margin: 10px auto 0;
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filtro {
+    background-color: #ffffff;
+    color: #174A7E;
+    border: 1px solid #cfdce7;
+
+    padding: 9px 18px;
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filtro:hover {
+    background-color: #f3f7fa;
+}
+
+.activo-filtro {
+    background-color: #E94B8A;
+    color: #ffffff;
+    border-color: #E94B8A;
+}
+
+
+/* =========================
+   GRID DE FOTOS
+========================= */
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 180px;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
+
+.foto-galeria {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.3s;
+}
+
+.foto-galeria img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   TAMAÑOS DIFERENTES
+========================= */
+
+.foto-grande {
+    grid-column: span 2;
+}
+
+.foto-ancha {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .galeria-contenido {
+        width: 92%;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .foto-grande,
+    .foto-ancha {
+        grid-column: span 1;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .galeria-titulo h1 {
+        font-size: 32px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .foto-grande,
+    .foto-ancha {
+        grid-column: span 1;
+    }
+
+    .filtros-galeria {
+        gap: 8px;
+    }
+
+    .filtro {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+}
+.foto-galeria img.mover-caras {
+    transform: translateY(50px);
+}
+
+/* ==================================================
+   SOBRE LA SAGA - NUEVA VERSION
+================================================== */
+
+.sobre-saga-nueva {
+    width: 100%;
+    min-height: 820px;
+
+    display: grid;
+    grid-template-columns: 53% 47%;
+
+    background-color: #f7f4ee;
+}
+
+
+/* =========================
+   COLUMNA IZQUIERDA
+========================= */
+
+.sobre-saga-texto {
+    padding: 65px 65px 55px 75px;
+
+    color: #174A7E;
+}
+
+
+/* TITULO */
+
+.sobre-saga-texto h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 62px;
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin: 0 0 10px;
+
+    line-height: 1;
+}
+
+
+/* SUBTITULO */
+
+.sobre-saga-texto h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+    font-weight: normal;
+    font-style: italic;
+
+    color: #5f8caf;
+
+    margin-bottom: 36px;
+}
+
+
+/* TEXTO PRINCIPAL */
+
+.intro-saga {
+    max-width: 610px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: #24364a;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #ccd4da;
+
+    margin-bottom: 26px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-nueva {
+    position: relative;
+
+    margin-bottom: 42px;
+}
+
+
+/* LINEA VERTICAL */
+
+.timeline-nueva::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    top: 12px;
+    bottom: 12px;
+
+    width: 1px;
+
+    background-color: #9bb5c9;
+}
+
+
+/* CADA FECHA */
+
+.evento-saga {
+    position: relative;
+
+    display: flex;
+
+    gap: 28px;
+
+    margin-bottom: 23px;
+}
+
+
+/* CIRCULO */
+
+.punto {
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+
+    border-radius: 50%;
+
+    background-color: #78a8c9;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* AÑO */
+
+.evento-saga h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    color: #174A7E;
+
+    margin: -5px 0 2px;
+}
+
+
+/* TEXTO TIMELINE */
+
+.evento-saga p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+    line-height: 1.4;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TEXTO FINAL
+========================= */
+
+.cierre-saga {
+    max-width: 580px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: #24364a;
+
+    margin-bottom: 24px;
+}
+
+
+/* FRASE */
+
+.frase-escrita {
+    font-family: "Brush Script MT", cursive;
+
+    font-size: 36px;
+
+    color: #174A7E;
+
+    transform: rotate(-2deg);
+
+    margin: 0;
+}
+
+
+/* =========================
+   FOTO DERECHA
+========================= */
+
+.sobre-saga-foto {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.sobre-saga-foto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sobre-saga-nueva {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-saga-texto {
+        padding: 45px 35px;
+    }
+
+    .sobre-saga-texto h1 {
+        font-size: 48px;
+    }
+
+    .sobre-saga-foto {
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sobre-saga-texto {
+        padding: 35px 25px;
+    }
+
+    .sobre-saga-texto h1 {
+        font-size: 38px;
+    }
+
+    .sobre-saga-texto h2 {
+        font-size: 17px;
+    }
+
+    .intro-saga {
+        font-size: 15px;
+    }
+
+    .frase-escrita {
+        font-size: 28px;
+    }
+
+    .sobre-saga-foto {
+        height: 400px;
+    }
+}
+
+/* ==================================================
+   PAGINA CONTACTO - VERSION FINAL
+================================================== */
+
+.contacto-contenido {
+    width: 86%;
+    margin: 35px auto 60px;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.contacto-titulo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contacto-titulo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    color: #174A7E;
+    margin-bottom: 6px;
+}
+
+.contacto-titulo p {
+    font-size: 12px;
+    color: #174A7E;
+}
+
+.contacto-titulo .detalle-titulo {
+    width: 55px;
+    height: 3px;
+    background-color: #E94B8A;
+    margin: 10px auto 0;
+}
+
+
+/* =========================
+   CAJA PRINCIPAL
+========================= */
+
+.contacto-caja {
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dce5ec;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   FORMULARIO IZQUIERDA
+========================= */
+
+.contacto-formulario {
+    padding: 28px 30px;
+    background-color: #ffffff;
+}
+
+.contacto-formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-formulario label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #174A7E;
+    margin-bottom: 5px;
+}
+
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+    width: 100%;
+
+    padding: 10px 12px;
+    margin-bottom: 16px;
+
+    border: 1px solid #d5dce3;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+
+    color: #174A7E;
+    background-color: #ffffff;
+
+    outline: none;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario select:focus,
+.contacto-formulario textarea:focus {
+    border-color: #74C9E8;
+}
+
+.contacto-formulario textarea {
+    resize: none;
+}
+
+
+/* =========================
+   BOTON
+========================= */
+
+.boton-contacto {
+    align-self: flex-start;
+
+    background-color: #E94B8A;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 11px 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.boton-contacto:hover {
+    background-color: #d63878;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   PARTE DERECHA
+   FOTO + TEXTO SUPERPUESTO
+========================= */
+
+.contacto-info {
+    position: relative;
+
+    min-height: 520px;
+
+    overflow: hidden;
+
+    background-color: #f6f9fb;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.contacto-imagen {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================
+   TEXTO SUPERPUESTO
+========================= */
+
+.contacto-info-texto {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    z-index: 2;
+
+    width: 330px;
+
+    padding: 22px;
+
+    background-color: rgba(255, 255, 255, 0.88);
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-info-texto h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #174A7E;
+
+    margin-bottom: 10px;
+}
+
+.contacto-info-texto p {
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #174A7E;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   REDES
+========================= */
+
+.contacto-redes {
+    display: flex;
+    gap: 10px;
+}
+
+.contacto-redes a {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background-color: #174A7E;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.contacto-redes a:hover {
+    background-color: #E94B8A;
+}
+
+
+/* =========================
+   FRASE FINAL
+========================= */
+
+.contacto-frase {
+    margin-top: 14px;
+
+    background-color: #eef6fb;
+
+    border-radius: 8px;
+
+    padding: 12px 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    text-align: center;
+}
+
+.contacto-frase p {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #174A7E;
+}
+
+.contacto-frase span {
+    font-size: 20px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .contacto-contenido {
+        width: 92%;
+    }
+
+    .contacto-caja {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info {
+        min-height: 430px;
+    }
+
+    .contacto-info-texto {
+        width: 300px;
+
+        top: 25px;
+        left: 25px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .contacto-titulo h1 {
+        font-size: 31px;
+    }
+
+    .contacto-formulario {
+        padding: 22px 18px;
+    }
+
+    .contacto-info {
+        min-height: 380px;
+    }
+
+    .contacto-info-texto {
+        width: calc(100% - 36px);
+
+        top: 18px;
+        left: 18px;
+
+        padding: 18px;
+    }
+
+    .contacto-info-texto h2 {
+        font-size: 21px;
+    }
+
+    .contacto-frase {
+        gap: 10px;
+        padding: 12px;
+    }
+}
+/* ==================================================
+   MAMMA MIA 2008 - VERSION NUEVA
+================================================== */
+
+.pelicula-2008 {
+    background-color: #f7f4ee;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-2008 {
+    position: relative;
+
+    width: 100%;
+    height: 465px;
+
+    overflow: hidden;
+}
+
+
+/* FOTO DE FONDO */
+
+.hero-2008-fondo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* DIFUMINADO BLANCO */
+
+.hero-2008-capa {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(247, 244, 238, 0.98) 0%,
+        rgba(247, 244, 238, 0.92) 24%,
+        rgba(247, 244, 238, 0.62) 42%,
+        rgba(247, 244, 238, 0.10) 65%,
+        rgba(247, 244, 238, 0) 100%
+    );
+}
+
+
+/* TEXTO HERO */
+
+.hero-2008-texto {
+    position: relative;
+
+    z-index: 2;
+
+    width: 48%;
+
+    padding: 55px 0 0 6%;
+}
+
+
+.breadcrumb-2008 {
+    font-size: 11px;
+    color: #174A7E;
+
+    margin-bottom: 22px;
+}
+
+
+.hero-2008-texto h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 54px;
+    line-height: 1;
+
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 20px;
+}
+
+.hero-2008-texto h1 span {
+    font-size: 35px;
+}
+
+
+.descripcion-2008 {
+    max-width: 540px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: #20364e;
+
+    margin-bottom: 24px;
+}
+
+
+/* BOTON TRAILER */
+
+.boton-trailer-2008 {
+    display: inline-block;
+
+    background-color: #5d9bc7;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    padding: 13px 32px;
+
+    border-radius: 3px;
+
+    transition: 0.2s;
+}
+
+.boton-trailer-2008:hover {
+    background-color: #4d8ab5;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   INFORMACION INFERIOR
+========================= */
+
+.info-2008 {
+    width: 90%;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1.2fr;
+
+    background-color: #f7f4ee;
+
+    padding: 28px 0 45px;
+}
+
+
+/* COLUMNAS */
+
+.columna-2008 {
+    padding: 0 32px;
+}
+
+.columna-2008 + .columna-2008 {
+    border-left: 1px solid #ccd4da;
+}
+
+
+.columna-2008 h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   FICHA TECNICA
+========================= */
+
+.dato-2008 {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+
+    margin-bottom: 13px;
+}
+
+.dato-2008 span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #3d83b3;
+}
+
+.dato-2008 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+/* =========================
+   PERSONAJES
+========================= */
+
+.reparto-grid-2008 {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px 22px;
+}
+
+
+.actor-2008 {
+    text-align: center;
+}
+
+
+.actor-2008 img {
+    width: 100%;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    display: block;
+
+    margin-bottom: 7px;
+}
+.donna-bajar {
+    object-position: center 5%;
+}
+
+
+.actor-2008 h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 2px;
+}
+sophie-bajar {
+    object-position: center 5%;
+}
+
+.actor-2008 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+/* =========================
+   CANCIONES
+========================= */
+
+.cancion-2008 {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+.cancion-2008 span {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #dcebf4;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    color: #174A7E;
+}
+
+
+.cancion-2008 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+.ver-canciones-2008 {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    color: #2d7eb2;
+}
+
+.ver-canciones-2008:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero-2008 {
+        height: 430px;
+    }
+
+    .hero-2008-texto {
+        width: 60%;
+    }
+
+    .hero-2008-texto h1 {
+        font-size: 46px;
+    }
+
+    .descripcion-2008 {
+        font-size: 16px;
+    }
+
+    .info-2008 {
+        grid-template-columns: 1fr;
+    }
+
+    .columna-2008 {
+        padding: 25px 0;
+    }
+
+    .columna-2008 + .columna-2008 {
+        border-left: none;
+        border-top: 1px solid #ccd4da;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .hero-2008 {
+        height: 520px;
+    }
+
+    .hero-2008-capa {
+        background: rgba(247, 244, 238, 0.82);
+    }
+
+    .hero-2008-texto {
+        width: 88%;
+        padding: 45px 0 0 6%;
+    }
+
+    .hero-2008-texto h1 {
+        font-size: 38px;
+    }
+
+    .hero-2008-texto h1 span {
+        font-size: 25px;
+    }
+
+    .descripcion-2008 {
+        font-size: 15px;
+    }
+
+    .info-2008 {
+        width: 88%;
+    }
+
+    .reparto-grid-2008 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .actor-2008 img {
+        height: 130px;
+    }
+}
+/* ==================================================
+   MAMMA MIA 2018
+================================================== */
+
+.pelicula-2018 {
+    background-color: #f7f4ee;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-2018 {
+    position: relative;
+
+    width: 100%;
+    height: 465px;
+
+    overflow: hidden;
+}
+
+
+/* FOTO DE FONDO */
+
+.hero-2018-fondo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* DIFUMINADO */
+
+.hero-2018-capa {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(247, 244, 238, 0.98) 0%,
+        rgba(247, 244, 238, 0.92) 24%,
+        rgba(247, 244, 238, 0.62) 42%,
+        rgba(247, 244, 238, 0.10) 65%,
+        rgba(247, 244, 238, 0) 100%
+    );
+}
+
+
+/* =========================
+   TEXTO HERO
+========================= */
+
+.hero-2018-texto {
+    position: relative;
+
+    z-index: 2;
+
+    width: 50%;
+
+    padding: 50px 0 0 6%;
+}
+
+
+.breadcrumb-2018 {
+    font-size: 11px;
+
+    color: #174A7E;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-2018-texto h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 47px;
+    line-height: 1;
+
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 18px;
+}
+
+
+.hero-2018-texto h1 span {
+    display: block;
+
+    font-size: 27px;
+
+    margin-top: 5px;
+}
+
+
+.descripcion-2018 {
+    max-width: 540px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.55;
+
+    color: #20364e;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   BOTON
+========================= */
+
+.boton-trailer-2018 {
+    display: inline-block;
+
+    background-color: #5d9bc7;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    padding: 13px 32px;
+
+    border-radius: 3px;
+
+    transition: 0.2s;
+}
+
+
+.boton-trailer-2018:hover {
+    background-color: #4d8ab5;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   INFORMACION INFERIOR
+========================= */
+
+.info-2018 {
+    width: 90%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.6fr 1.2fr;
+
+    background-color: #f7f4ee;
+
+    padding: 28px 0 45px;
+}
+
+
+/* =========================
+   COLUMNAS
+========================= */
+
+.columna-2018 {
+    padding: 0 32px;
+}
+
+
+.columna-2018 + .columna-2018 {
+    border-left: 1px solid #ccd4da;
+}
+
+
+.columna-2018 h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   FICHA TECNICA
+========================= */
+
+.dato-2018 {
+    display: grid;
+
+    grid-template-columns: 105px 1fr;
+
+    margin-bottom: 13px;
+}
+
+
+.dato-2018 span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #3d83b3;
+}
+
+
+.dato-2018 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+/* =========================
+   PERSONAJES
+========================= */
+
+.reparto-grid-2018 {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px 22px;
+}
+
+
+.actor-2018 {
+    text-align: center;
+}
+
+
+.actor-2018 img {
+    width: 100%;
+    height: 115px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 5px;
+
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+
+.actor-2018 h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: normal;
+
+    color: #174A7E;
+
+    margin-bottom: 2px;
+}
+
+
+.actor-2018 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+/* =========================
+   CANCIONES
+========================= */
+
+.cancion-2018 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+.cancion-2018 span {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #dcebf4;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    color: #174A7E;
+}
+
+
+.cancion-2018 p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #24364a;
+
+    margin: 0;
+}
+
+
+.ver-canciones-2018 {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    color: #2d7eb2;
+}
+
+
+.ver-canciones-2018:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero-2018 {
+        height: 430px;
+    }
+
+    .hero-2018-texto {
+        width: 60%;
+    }
+
+    .hero-2018-texto h1 {
+        font-size: 42px;
+    }
+
+    .descripcion-2018 {
+        font-size: 16px;
+    }
+
+    .info-2018 {
+        grid-template-columns: 1fr;
+    }
+
+    .columna-2018 {
+        padding: 25px 0;
+    }
+
+    .columna-2018 + .columna-2018 {
+        border-left: none;
+
+        border-top: 1px solid #ccd4da;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    .hero-2018 {
+        height: 520px;
+    }
+
+    .hero-2018-capa {
+        background: rgba(247, 244, 238, 0.82);
+    }
+
+    .hero-2018-texto {
+        width: 88%;
+
+        padding: 45px 0 0 6%;
+    }
+
+    .hero-2018-texto h1 {
+        font-size: 34px;
+    }
+
+    .hero-2018-texto h1 span {
+        font-size: 22px;
+    }
+
+    .descripcion-2018 {
+        font-size: 15px;
+    }
+
+    .info-2018 {
+        width: 88%;
+    }
+
+    .reparto-grid-2018 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .actor-2018 img {
+        height: 130px;
+    }
+}
+
+/* =========================================
+   LIGHTBOX GALERIA
+========================================= */
+
+.foto-galeria img {
+    cursor: pointer;
+}
+
+
+/* Fondo negro al abrir la imagen */
+
+.lightbox {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.88);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 40px;
+}
+
+
+/* Cuando está abierto */
+
+.lightbox.lightbox-activo {
+    display: flex;
+}
+
+
+/* Imagen grande */
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Botón X */
+
+.cerrar-lightbox {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+
+.cerrar-lightbox:hover {
+    opacity: 0.7;
+}
+
+
+/* Efecto cuando pasás el mouse */
+
+.foto-galeria img {
+    transition: transform 0.25s ease,
+                opacity 0.25s ease;
+}
+
+
+.foto-galeria:hover img {
+    transform: scale(1.02);
+    opacity: 0.92;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+    .lightbox {
+        padding: 20px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 82vh;
+    }
+
+    .cerrar-lightbox {
+        top: 10px;
+        right: 18px;
+
+        font-size: 40px;
+    }
+}
+/* FLECHAS DEL LIGHTBOX */
+
+.flecha-lightbox {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+
+    color: white;
+
+    width: 55px;
+    height: 70px;
+
+    font-size: 55px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    z-index: 10000;
+
+    transition: 0.2s;
+}
+
+
+.flecha-lightbox:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+.flecha-izquierda {
+    left: 25px;
+}
+
+
+.flecha-derecha {
+    right: 25px;
+}
+
+
+@media (max-width: 650px) {
+
+    .flecha-lightbox {
+        width: 42px;
+        height: 58px;
+
+        font-size: 42px;
+    }
+
+    .flecha-izquierda {
+        left: 8px;
+    }
+
+    .flecha-derecha {
+        right: 8px;
+    }
+}
+.buscador-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px !important;
+    text-decoration: none;
+}
+
+.lupa-simple {
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #174A7E;
+    border-radius: 50%;
+
+    position: relative;
+
+    display: inline-block;
+}
+
+.lupa-simple::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 2px;
+
+    background-color: #174A7E;
+
+    right: -5px;
+    bottom: -2px;
+
+    transform: rotate(45deg);
+
+    border-radius: 2px;
+}
+
+.buscador-icono:hover .lupa-simple {
+    border-color: #E94B8A;
+}
+
+.buscador-icono:hover .lupa-simple::after {
+    background-color: #E94B8A;
+}
